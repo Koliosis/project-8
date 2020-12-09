@@ -10,7 +10,8 @@ class Graph():
 
 
     def add_edge(self, src, dest, w):
-        self.graph_lyst[src[self.graph_lyst.index()]][dest] = w
+        self.src_index = self.graph_lyst.index(src)
+        self.graph_lyst[src[self.src_index]][dest] = w
         return self.graph_lyst
 
 
@@ -34,7 +35,10 @@ class Graph():
         return
 
 def main():
-    Graph.add_edge(1,2,5)
+    # test_lyst = [5, 6, 7, 8, 9, 1, 2, 3, 4]
+    # test_temp = test_lyst.index(3)
+    # print(test_temp)
+    Graph.add_edge(1, 3, 5)
 
 main()
 
