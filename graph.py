@@ -10,12 +10,12 @@ class Graph():
 
 
     def add_edge(self, src, dest, w):
-        self.graph_lyst[src[self.graph_lyst.index()]][dest] = w
+        self.graph_lyst[src[self.label_lyst.index(src)]][dest[self.label_lyst.index(dest)]] = w
         return self.graph_lyst
 
 
     def get_weight(self, src, dest):
-        return
+        return self.graph_lyst[src[self.graph_lyst.index()]][dest]
 
 
     def dfs(self, starting_vertex):
@@ -34,7 +34,10 @@ class Graph():
         return
 
 def main():
-    Graph.add_edge(1,2,5)
+    # test_graph = [5, 6, 7, 8, 9, 1, 2, 3, 4]
+    # for i in test_graph:
+    #     print(test_graph[test_graph.index(i)])
+    Graph.add_edge(1, 2, 3)
 
 main()
 
